@@ -1,7 +1,7 @@
     import time
     
     def sacar(valor):
-        saldo = 500  # acesso ao banco de dados
+        saldo = 500
         saques = 0
         limite = 500
 
@@ -11,8 +11,6 @@
             enter = ""
     
             if saque == enter:
-                login = input('Login: ').strip()
-                senha = input('Senha: ').strip()
                 time.sleep(0.8)
                 print('Aguarde um momento, estamos processando...\n')
                 time.sleep(3)
