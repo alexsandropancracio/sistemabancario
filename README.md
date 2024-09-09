@@ -1,4 +1,4 @@
-import time
+    import time
     
     def sacar(valor):
         saldo = 500  # acesso ao banco de dados
