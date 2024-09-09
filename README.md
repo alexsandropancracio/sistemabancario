@@ -1,7 +1,7 @@
     import time
     
     def sacar(valor):
-        saldo = 500  # acesso ao banco de dados
+        saldo = 500
         limite = 500
         sacou = 0
         saques = 0
