@@ -1,7 +1,7 @@
-    import time
+import time
     
     def sacar(valor):
-        saldo = 500
+        saldo = 500  # acesso ao banco de dados
         limite = 500
         sacou = 0
         saques = 0
@@ -24,14 +24,11 @@
                 while True:
                     print('-' * 50)
                     print('Saldo atual: R${:.2f}'.format(saldo))
-                    opcao = input('Informe uma opção: \n[1]Saque\n[2]Deposito\n[3]Extrato\n[0]Sair\nOpção: ')
+                    opcao = int(input('Informe uma opção: \n[1]Saque\n[2]Deposito\n[3]Extrato\n[0]Sair\nOpção: '))
                     print('-' * 50)
-    
                     opcoes = [0, 1, 2, 3]
     
                     if opcao == 1:
-                        opcao = int(opcao)
-    
                         while True:
                             if saques <= 1:
                                 total = input('Valor: R$')
@@ -82,10 +79,11 @@
                                             time.sleep(2)
                                             break
     
-                                        if total == "":
+                                        if total == enter:
                                             print('Informação inválida. Por favor, tente novamente.\n')
                                             time.sleep(1)
-                                break
+                                    break
+    
                             else:
                                 print('''Você atingiu o limite de saque diário. 
     Por favor, volte amanhã para mais saques ou entre em contato com nossa central.''')
@@ -94,7 +92,7 @@
                         break
     
                     if opcao == 2:
-                        opcao = int(opcao)
+    
                         deposito = float(input('Valor: R$'))
     
                         while True:
@@ -121,7 +119,7 @@
                         break
     
                     if opcao == 3:
-                        opcao = int(opcao)
+    
                         while True:
                             time.sleep(1)
                             print('Processando extrato...')
@@ -140,9 +138,9 @@
                                 print('Operação concluída!')
                                 time.sleep(2)
                                 break
-    
+                        continue
                     if opcao == 0:
-                        opcao = int(opcao)
+    
                         print('Obrigado pela preferência. Volte sempre!\n')
                         time.sleep(2)
                         break
@@ -150,6 +148,5 @@
                     if opcao != opcoes:
                         print('Informação inválida. Tente novamente.')
                         time.sleep(1)
-    
     
     sacar(0)
